@@ -45,11 +45,14 @@ h3 { font-size: 17px; margin: 0; }
 .banner { display: flex; gap: 10px; align-items: center; justify-content: space-between; background: var(--blue-soft); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; font-size: 14px; }
 .banner.warn { background: var(--amber-soft); }
 
-.summary { display: flex; gap: 12px; margin-bottom: 12px; }
+.summary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
 .stat { flex: 1; background: var(--card); border-radius: var(--radius); padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 6px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
 .ring { --c: var(--green); width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center;
   background: conic-gradient(var(--c) calc(var(--p) * 1%), var(--line) 0); }
 .ring.water { --c: var(--blue); }
+.ring.kcal { --c: var(--amber); }
+.ring.over { --c: var(--red); }
+.ring.prot { --c: #8a5bd6; }
 .ring b { background: var(--card); width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; font-size: 17px; }
 
 .glasses { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 12px; }
@@ -106,7 +109,7 @@ details summary { cursor: pointer; font-weight: 600; }
 .wlist li { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
 
 nav { position: fixed; bottom: 0; inset-inline: 0; display: flex; background: var(--card); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
-nav button { flex: 1; background: none; border: none; font: inherit; font-size: 20px; padding: 8px 0 6px; color: var(--muted); display: flex; flex-direction: column; align-items: center; position: relative; cursor: pointer; }
+nav button { flex: 1; min-width: 0; background: none; border: none; font: inherit; font-size: 20px; padding: 8px 0 6px; color: var(--muted); display: flex; flex-direction: column; align-items: center; position: relative; cursor: pointer; }
 nav button span { font-size: 12px; }
 nav button.active { color: var(--green); }
 nav button.active span { font-weight: 700; }
@@ -122,3 +125,22 @@ fieldset { border: 1px solid var(--line); border-radius: 12px; margin: 0 0 10px;
 #toast { position: fixed; bottom: calc(86px + env(safe-area-inset-bottom)); left: 50%; transform: translate(-50%, 20px); background: var(--text); color: var(--bg); padding: 10px 18px; border-radius: 999px; opacity: 0; transition: .25s; pointer-events: none; font-size: 14px; max-width: 90vw; text-align: center; }
 #toast.show { opacity: 1; transform: translate(-50%, 0); }
 #shopBadge[hidden] { display: none; }
+
+.stat span { font-size: 13px; text-align: center; }
+.nut { color: var(--amber); font-weight: 600; margin: -4px 0 10px; }
+.dots { display: flex; align-items: center; gap: 8px; margin: 10px 0; }
+.dot { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--green); }
+.dot.full { background: var(--green); }
+.walk-card .row.small { margin-bottom: 8px; }
+#walkMin { width: 70px; }
+.mitem { border-top: 1px solid var(--line); padding: 8px 0 4px; margin-top: 8px; }
+.mopt { display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 10px; }
+.mopt.def { background: var(--green-soft); }
+.star { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--amber); padding: 0 2px; }
+.field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+.field input, .field select { font-size: 16px; color: var(--text); width: 100%; }
+.userow { margin: 6px 0; }
+.userow select { min-width: 0; }
+.userow input { width: 80px; }
+table.prods td { font-size: 14px; }
+dialog { max-height: 88vh; overflow-y: auto; }

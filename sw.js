@@ -1,4 +1,4 @@
-const CACHE = 'easyfit-v1';
+const CACHE = 'easyfit-v2';
 const ASSETS = ['./', 'index.html', 'styles.css', 'data.js', 'app.js', 'icon.svg', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => {
