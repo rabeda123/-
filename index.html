@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>EasyFit</title>
+  <meta name="description" content="תפריט תזונה, תזכורות לארוחות ולמים, מלאי ורשימת קניות">
+  <meta name="theme-color" content="#1f8a5b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="EasyFit">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>EasyFit <span>in Fun</span></h1></header>
+  <main id="view"></main>
+  <nav>
+    <button data-tab="today">🍽️<span>היום</span></button>
+    <button data-tab="shop">🛒<span>קניות</span><i id="shopBadge" hidden></i></button>
+    <button data-tab="stock">📦<span>מלאי</span></button>
+    <button data-tab="track">📈<span>מעקב</span></button>
+    <button data-tab="settings">⚙️<span>הגדרות</span></button>
+  </nav>
+  <dialog id="dlg"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
